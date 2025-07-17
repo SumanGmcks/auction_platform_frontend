@@ -2,7 +2,7 @@ import { CategoryDropDown, Caption, PrimaryButton, Title } from "../../router";
 
 import { commonClassNameOfInput } from "../../components/common/Design";
 import { UseRedirectLoggedOutUser } from "../../hooks/useRedirectLoggedOutUser";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createProduct } from "../../redux/features/productSlice";
@@ -29,7 +29,6 @@ export const AddProduct = () => {
     const [imagePreview, setImagePreview] = useState(null);
 
     const { title, description, price, height, lengthPic, width, mediumUsed, weight, category } = product;
-    const { isSuccess } = useSelector((state) => state.product);
 
     const handleInputChange = (e) => {
       const { name, value } = e.target;

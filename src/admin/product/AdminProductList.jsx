@@ -8,7 +8,7 @@ import { useEffect } from "react";
 export const AdminProductList = () => {
     UseRedirectLoggedOutUser("/");
     const dispatch = useDispatch();
-    const { products, userproducts, isLoading } = useSelector((state) => state.product);
+    const { userproducts, isLoading } = useSelector((state) => state.product);
   
     useEffect(() => {
       dispatch(getAllProduct());

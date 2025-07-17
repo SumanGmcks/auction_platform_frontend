@@ -11,7 +11,7 @@ export const CreateCategory = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
-  const [error, setError] = useState("");
+  const [ setError] = useState("");
 
   const handleInputChange = (e) => {
     setTitle(e.target.value);

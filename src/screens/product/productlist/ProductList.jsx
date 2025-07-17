@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlinePlus } from "react-icons/ai";
 import { UseRedirectLoggedOutUser } from "../../../hooks/useRedirectLoggedOutUser";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProduct, getAllProductofUser, sellProduct } from "../../../redux/features/productSlice";
+import { deleteProduct, getAllProductofUser } from "../../../redux/features/productSlice";
 import { Table } from "../../../components/Table";
 import { sellproductsbyuser } from "../../../redux/features/biddingSlice";
 
