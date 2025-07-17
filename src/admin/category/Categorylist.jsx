@@ -4,7 +4,6 @@ import { Title, PrimaryButton, ProfileCard, DateFormatter } from "../../router";
 import { TiEyeOutline } from "react-icons/ti";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteOutline } from "react-icons/md";
-import { User2 } from "../../components/hero/Hero";
 import { UseRedirectLoggedOutUser } from "../../hooks/useRedirectLoggedOutUser";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";

@@ -3,10 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom root variables with fallbacks for minifier compatibility */
+:root {
+  --primary-color: #204C41; /* Example from tailwind.config.js */
+  --green-color: #5BBB7B;
+  --text-color: #222222;
+  /* Add fallbacks if using in custom styles */
+}
+
 body {
   font-family: "DM Sans", sans-serif;
-  /* background-color: #fafafa; */
+  background-color: var(--background-color, #fafafa); /* Fallback added */
 }
+
 /*    Navbar   */
 .menu-container {
   background-color: #24262b;
