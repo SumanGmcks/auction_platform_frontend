@@ -2,6 +2,7 @@ import { TiEyeOutline } from "react-icons/ti";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { BACKEND_URL } from "../utils/url";
 
 export const Table = ({ products = [], isWon, isAdmin, handleSellProduct = () => {} , handleDeleteProduct}) => {
   return (
@@ -55,7 +56,7 @@ export const Table = ({ products = [], isWon, isAdmin, handleSellProduct = () =>
                     className="w-10 h-10 rounded-md"
                     src={
                       typeof product?.image === "string"
-                        ? product.image
+                        ? `${BACKEND_URL.replace("/api", "")}/${product.image}`
                         : product?.image?.filePath || ""
                     }
                     alt="Product"
