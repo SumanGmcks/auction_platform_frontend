@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../redux/features/productSlice";
 import { fetchBiddingHistory } from "../../redux/features/biddingSlice";
+import { BACKEND_URL } from "../../utils/url";
 
 const fallbackProductImage = "/images/common/bg.png"; 
 
@@ -46,7 +47,7 @@ export const ProductsDetailsPage = () => {
           <div className="flex justify-between gap-8">
             <div className="w-1/2">
               <div className="h-[70vh]">
-                <img src={product?.image?.filePath || fallbackProductImage} alt="" className="w-full h-full object-cover rounded-xl" />
+                <img src={`${BACKEND_URL}/${product?.image?.filePath || fallbackProductImage}`} alt="" className="w-full h-full object-cover rounded-xl" />
               </div>
             </div>
             <div className="w-1/2">
@@ -196,7 +197,7 @@ export const ProductsDetailsPage = () => {
                     </div>
                     <div className="w-1/2">
                       <div className="h-[60vh] p-2 bg-green rounded-xl">
-                        <img src={product?.image?.filePath || fallbackProductImage} alt="" className="w-full h-full object-cover rounded-xl" />
+                        <img src={`${BACKEND_URL}/${product?.image?.filePath || fallbackProductImage}`} alt="" className="w-full h-full object-cover rounded-xl" />
                       </div>
                     </div>
                   </div>
